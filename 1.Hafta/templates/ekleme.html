@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="form-wrapper">
+        <h3 class="mb-4 text-center">➕ Yeni Personel Ekle</h3>
+        <form action="/personel/ekle" method="post">
+            <div class="mb-3">
+                <label for="ad" class="form-label">Ad</label>
+                <input type="text" class="form-control" id="ad" name="ad" required>
+            </div>
+            <div class="mb-3">
+                <label for="soyad" class="form-label">Soyad</label>
+                <input type="text" class="form-control" id="soyad" name="soyad" required>
+            </div>
+            <div class="mb-3">
+                <label for="G-mail" class="form-label">G-mail</label>
+                <input type="text" class="form-control" id="G-mail" name="G-mail" required>
+            </div>
+            <div class="mb-3">
+                <label for="pozisyon" class="form-label">Pozisyon</label>
+                <input type="text" class="form-control" id="pozisyon" name="pozisyon" required>
+            </div>
+            <div class="mb-3">
+                <label for="maas" class="form-label">Maaş (₺)</label>
+                <input type="number" class="form-control" id="maas" name="maas" required>
+            </div>
+            <div class="mb-3">
+                <label for="ise_baslama_tarihi" class="form-label">İşe Başlama Tarihi</label>
+                <input type="date" class="form-control" id="ise_baslama_tarihi" name="ise_baslama_tarihi" required>
+            </div>
+            <div class="mb-3">
+                <label for="giris_cikis_zamani" class="form-label">Giriş - Çıkış Zamanı</label>
+                <input type="time" class="form-control" id="giris_cikis_zamani" name="giris_cikis_zamani" required>
+
+            </div>
+            <div class="d-grid">
+                <a href ="{{ url_for('liste') }}" button type="submit" class="btn btn-success">Kaydet</button></a>
+                <a href="{{ url_for('home') }}" button type="submit" class="btn btn-secondary mt-2">İptal Et</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %} 

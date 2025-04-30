@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Hoş geldin Aysel!</h2>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-4">
+            <div class="card-body text-center">
+                <h5>Çalışılan Gün Sayısı</h5>
+                <p class="display-6">216</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-4">
+            <div class="card-body text-center">
+                <h5>Günlük Çalışma Saati</h5>
+                <p class="display-6">10</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-danger mb-4">
+            <div class="card-body text-center">
+                <h5>Kullanılan İzin Sayısı</h5>
+                <p class="display-6">13</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-4">
+            <div class="card-body text-center">
+                <h5>Kalan İzin Hakkı</h5>
+                <p class="display-6">12</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+    <div class="container">
+        
+    
+        <div class="table-wrapper mt-4">
+    
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        <th>Pozisyon</th>
+                        <th>Maaş</th>
+                        <th>İşe Başlama</th>
+                        <th>Giriş - Çıkış</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td> Aysel </td>
+                        <td> Koç </td>
+                        <td> Veri Analisti</td>
+                        <td> 32.100 ₺</td>
+                        <td> 23.07.01 </td>
+                        <td> 08.30 - 18.30 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+</div>
+{% endblock %}

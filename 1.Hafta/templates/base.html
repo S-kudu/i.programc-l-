@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personel Takip Sistemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #f8f9fa;
+        }
+        .auth-buttons {
+            margin-left: auto;
+        }
+    </style>
+     <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .login-wrapper {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-wrapper {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+     <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .table-wrapper {
+            margin-top: 40px;
+            background: #fff;
+            padding: 90px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .btn-custom {
+            margin-right: 5px;
+        }
+    </style>
+     <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .report-wrapper {
+            margin-top: 40px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            margin-right: 5px;
+        }
+    </style>
+     <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .login-wrapper {
+            max-width: 450px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Personel Takip</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('admin') }}">Admin</a>
+                    </li>
+                </ul>
+                <div class="auth-buttons d-flex ms-auto">
+                    <a href="{{ url_for('login') }}" class="btn btn-outline-light me-2">Giriş Yap</a>
+                    <a href="{{ url_for('register') }}" class="btn btn-light">Kayıt Ol</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <div class="container mt-4">
+        {% block content %}
+        <div class="row py-5 bg-dark text-white">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h1 class="display-8">Personel Takip Sistemine Hoş Geldiniz!</h1>
+                <p class="lead mb-4">Bu sayfa diğer bilgilere kolaylıkla ulaşmanız adına hazırlanmıştır.</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="/register" class="btn btn-primary btn-lg px-4 gap-3">Kayıt Ol</a>
+                    <a href="/login" class="btn btn-outline-light btn-lg px-4">Giriş Yap</a>
+                </div>
+            </div>
+        </div>
+          
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-person-plus-fill display-4 text-primary mb-3"></i>
+                        <h3>Personel Ekle</h3>
+                        <p>Yeni personel bilgilerini sisteme kaydedin.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-calendar-check display-4 text-primary mb-3"></i>
+                        <h3>Personel Takibi</h3>
+                        <p>Personelinizin izin durumlarını ve çalışma saatlerini takip edin.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-shield-lock display-4 text-primary mb-3"></i>
+                        <h3>Güvenli</h3>
+                        <p>Personel bilgileriniz sadece yetkili kişilerle paylaşılır ve güvenle saklanır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <footer class="text-center">
+            <p>&copy; 2025 Personel Takip Sistemi - Tüm Hakları Saklıdır.</p>
+        </footer>
+        {% endblock %}
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
