@@ -1,0 +1,42 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def home():
+    return render_template('base.html')
+
+
+@app.route('/login')
+def login():
+    return render_template('login.html') 
+
+
+@app.route('/register')
+def register():
+    return render_template('register.html')  
+
+@app.route('/ekleme')
+def ekleme():
+    return render_template('ekleme.html') 
+
+@app.route('/listeI')
+def liste():
+    return render_template('liste.html') 
+
+@app.route('/raporlar')
+def raporlar():
+    return render_template('raporlar.html') 
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html') 
+
+@app.route('/admin')
+def admin():
+    return render_template('admin.html') 
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
